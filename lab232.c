@@ -2,19 +2,20 @@
 #include <math.h>
 #include <time.h>
 
-//Task_2_1:  123,00123,058,-5, 0xaf, 0X0 - Верные числа и их значения
-//Task_2_2:  1,71,034159E1F, .005, 1234.56789L - Верные числа и их значения
+//lab_2_1:  123,00123,058,-5, 0xaf, 0X0 значения верно записанных констант, представляющие целочисленные значения
+//lab_2_2:  1,71,034159E1F, .005, 1234.56789L значения верно записанных констант, записанных с плавающей точкой
 
-void Lab_2_3(){
-    int a, b, c, d, e, q, k, g, f;
-    a = 2; b = 13; c = 7; d = 19; e = -4;
+void lab_2_3(){
+    int a, b, c, d, e,q,k,g,f;
+    a = 2;  b = 13;  c = 7;  d = 19;  e = -4;
     q = b % e;
     k = c % d-e;
     g = b % - e * c;
     f = d / a % c;
-    printf("q = %d, k = %d, g = %d, f = %d", q, k, g, f);
+    printf("q = %d, k = %d, g = %d, f = %d",q,k,g,f);
 }
-void Task_2_4(){
+
+void lab_2_4(){
     int a, c;
     c = 5;
 
@@ -29,9 +30,10 @@ void Task_2_4(){
 
     a = (c+=1)+c;
 
-    printf("c = %d, a = %d", c, a);
+    printf("c = %d, a = %d",c,a);
 }
-void Task_2_5() {
+
+void lab_2_5() {
     int a, c;
     c = 5;
 
@@ -49,15 +51,18 @@ void Task_2_5() {
 
     printf("c = %d, a = %d",c,a);
 }
-void Task_2_7() {
-    int a, b, c, res; a = 2;  b = 6;  c = 3;
+
+void lab_2_7() {
+    int a, b, c, res;   a = 2;  b = 6;  c = 3;
 //    res = -  -  - a;
 //    res = a --- b;
     printf("res = %d",a);
 }
-void Task_2_8() {
-    int  i,  j,  k, m;  char c, d; i = 1;  j = 2; k = -7; m = 0; c = 'w';
+
+void lab_2_8() {
+    int  i,  j,  k, m;  char c, d;   i = 1;  j = 2;  k = -7; m = 0; c = 'w';
     m = - i - 5 * j >= k+1;
+
 //    i + j++  + k = = -2*j;
 //    m = 3 < j < 5;
 //    m = 3 = = j < 5;
@@ -75,15 +80,14 @@ void Task_2_8() {
 //    k %= m = 1 + n / 2;
 //    1 + 3 * n += 7 / 5;
 //    1 + 3 * (n += 7) / 5;
-    printf("res = %d", m);
+    printf("res = %d",m);
 }
-//Task_2_9:
-//      not (not x) = x, Не эквивалентно !, так как два отрицания дадут одно и тоже число. 
-//	Ответ: неверно
-//      x and true = x , and Можно заменить на &&. 
-//	Ответ: верно
 
-void Task_2_14() {
+//lab_2_9:
+//      not (not x) = x, ! это одно отрицание, а в утверждении двойное отрицание, которое дает такой же ответ, неверно
+//      x and true = x , and можно заменить на &&, верно
+
+void lab_2_14() {
     double d;
     float f;
     long lng;
@@ -109,20 +113,20 @@ void Task_2_14() {
     printf("s = %hd i = %d lng = %ld f = %f d = %f\n", s, i, lng, f, d);
 }
 
-void Task_2_16() {
+float lab_2_16() {
     float x;
     scanf("%f", &x);
     return 2 * powf(x, 4) - 3 * powf(x, 3) + 4 * powf(x, 2) - 5 * x + 6;
 }
 
-void Task_2_17() {
+void lab_2_17() {
     int k, x;
     scanf("%d", &x);
     k = x % 1000 / 100;
     printf("k = %d", k);
 }
 
-void Task_2_18() {
+void lab_2_18() {
     int k = 0, x;
     scanf("%d", &x);
     while (x > 0) {
@@ -132,7 +136,7 @@ void Task_2_18() {
     printf("%d", k);
 }
 
-void Task_2_19() {
+void lab_2_19() {
     int k;
     float x;
     scanf("%f", &x);
@@ -140,7 +144,7 @@ void Task_2_19() {
     printf("%d", k);
 }
 
-void Task_2_20() {
+void lab_2_20() {
     int k = 0, x, i = 2;
     scanf("%d", &x);
     while (i >= 0) {
@@ -150,7 +154,8 @@ void Task_2_20() {
     printf("%d", k);
 }
 
-void Task_2_21() {
+
+void lab_2_21() {
     int s, m, y;
     scanf("%d", &s);
     y = s / 3600;
@@ -158,10 +163,10 @@ void Task_2_21() {
     printf("Прошло: %d-hours, %d-minutes", y, m);
 }
 
-void Task_2_22() {
+void lab_2_22() {
     float x, x_2=1,x_21=1;
     scanf("%f", &x);
     for (int i=1; i <= 4; i++)
         x_21*=(x_2 *= x*x);
-    printf("x^21 За 6 операций =%f\n", x_21*x);
+    printf("x^21 за 6 операций =%f\n", x_21*x);
 }
